@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    border: 0;
+}
+
+body,
+html {
+    font-family: "Playwrite DE Grund", cursive;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+
+/*body background*/
+
+.scroll-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 200vh;
+    /* Ensures page has enough height to scroll */
+    background-image: url('../WebDevImgs/bgcoffe.jpg');
+    /* Your background image */
+    background-size: cover;
+    /* Ensures image covers the entire area */
+    background-repeat: no-repeat;
+    /* Prevents image from repeating */
+    background-attachment: fixed;
+    /* Makes the background stay fixed as the page scrolls */
+    background-position: center;
+    /* Centers the background image */
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+}
+
+
+/*navigation section*/
+
+#navbar {
+    display: flex;
+    flex-direction: row;
+}
+
+#navbar ul {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+#navbar ul li {
+    padding: 35px 15px;
+}
+
+#navbar #logo img {
+    margin: 0 0 0 20px;
+    height: 80px;
+    width: 80px;
+}
+
+#navbar ul li a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: azure;
+    transition: background-color 0.8s ease;
+}
+
+#navbar ul li a:hover {
+    font-weight: bolder;
+    background-color: rgba(78, 35, 20, 0.5);
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+
+/*Parent Container: The parent element of the sticky element needs to have a defined height, and the sticky element itself must be within a scrollable area. If the parent element does not scroll, or if it has a height that prevents the sticky behavior from triggering, it won't work*/
+
+#navbar {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+#navbar::before {
+    content: "";
+    background-color: rgb(78, 35, 20);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    /* Ensure this stays behind the content */
+    opacity: 0.5;
+    pointer-events: none;
+    /* Prevent background from blocking interactions */
+}
+
+
+/*home-section*/
+
+#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 80px 100px;
+    height: 250px;
+    text-align: center;
+}
+
+#homeheading {
+    font-family: "Playwrite AR", cursive;
+    font-size: 2rem;
+    font-weight: bolder;
+    margin: 15px 0px 10px 0px;
+    color: #ffff;
+}
+
+#para {
+    font-size: 1.3rem;
+    margin: 8px 0px 10px 0px;
+    color: #722929;
+}
+
+#button button {
+    background-color: rgb(126, 57, 49);
+    padding: 14px 20px;
+    border-radius: 20px;
+    color: aliceblue;
+    font-size: 1rem;
+    font-family: "Playwrite DE Grund", cursive;
+}
+
+#button button:hover {
+    background-color: rgb(111, 40, 32);
+    cursor: pointer;
+}
+
+
+/* Menu section*/
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 990px;
+}
+
+
+/*coffee*/
+
+#coffeeheading {
+    color: #722929;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#coffeetable .items {
+    border-collapse: separate;
+    border-spacing: 20px 0px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: aliceblue;
+}
+
+#breadheading {
+    color: #722929;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 30px 0px 0px 0px;
+}
+
+#breadtable .items {
+    border-collapse: separate;
+    border-spacing: 20px 0px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: aliceblue;
+}
+
+#dessertheading {
+    color: #722929;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 30px 0px 0px 0px;
+}
+
+#desserttable .items {
+    border-collapse: separate;
+    border-spacing: 20px 0px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: aliceblue;
+}
+
+#dietheading {
+    color: #722929;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 30px 0px 0px 0px;
+}
+
+#diettable .items {
+    border-collapse: separate;
+    border-spacing: 20px 0px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: aliceblue;
+}
